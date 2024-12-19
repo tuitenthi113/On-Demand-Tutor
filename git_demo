@@ -1,0 +1,30 @@
+from sqlalchemy import Column, Integer, ForeignKey, String, DateTime
+from datetime import datetime
+
+class Feedback(Base):
+    __tablename__ = 'feedbacks'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)  # Người gửi phản hồi
+    content = Column(String, nullable=False)  # Nội dung phản hồi
+    created_at = Column(DateTime, default=datetime.utcnow)  # Thời gian phản hồi
+
+from sqlalchemy import Column, Integer, ForeignKey, String, DateTime
+
+class Complaint(Base):
+    __tablename__ = 'complaints'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)  # Người gửi khiếu nại
+    description = Column(String, nullable=False)  # Mô tả khiếu nại
+    status = Column(String, default='pending')  # Trạng thái xử lý ('pending', 'resolved', 'rejected')
+    created_at = Column(DateTime, default=datetime.utcnow)  # Thời gian gửi khiếu nại
+
+from sqlalchemy import Column, Integer, ForeignKey, String, Float
+
+class Service(Base):
+    __tablename__ = 'services'
+    id = Column(Integer, primary_key=True)
+    tutor_id = Column(Integer, ForeignKey('users.id'), nullable=False)  # Gia sư cung cấp dịch vụ
+    subject = Column(String, nullable=False)  # Môn học của dịch vụ
+    hourly_rate = Column(Float, nullable=False)  # Giá thuê theo giờ
+    description = Column(String, nullable=True)  # Mô tả dịch vụ
+
