@@ -1,3 +1,40 @@
+from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+class User(Base):
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    email = Column(String, unique=True, nullable=False)
+    password = Column(String, nullable=False)
+    role = Column(String, nullable=False)  # 'student', 'tutor', 'admin'
+
+
+from sqlalchemy import ForeignKey, DateTime
+
+class Booking(Base):
+    __tablename__ = 'bookings'
+    id = Column(Integer, primary_key=True)
+    student_id = Column(Integer, ForeignKey('users.id'))
+    tutor_id = Column(Integer, ForeignKey('users.id'))
+    service_id = Column(Integer, ForeignKey('services.id'))
+    date_time = Column(DateTime, nullable=False)
+    status = Column(String, nullable=False)  # 'pending', 'confirmed', 'completed'
+
+
+from sqlalchemy import Column, Integer, ForeignKey, Float
+
+class Rating(Base):
+    __tablename__ = 'ratings'
+    id = Column(Integer, primary_key=True)
+    student_id = Column(Integer, ForeignKey('users.id'), nullable=False)  # Liên kết với học sinh
+    tutor_id = Column(Integer, ForeignKey('users.id'), nullable=False)    # Liên kết với gia sư
+    score = Column(Float, nullable=False)  # Điểm số đánh giá (1-5)
+    comment = Column(String, nullable=True)  # Nhận xét tùy chọn
+
+
 from sqlalchemy import Column, Integer, ForeignKey, String, DateTime
 from datetime import datetime
 
