@@ -1,18 +1,20 @@
-from flask import Flask, render_template  
-from flask_socketio import SocketIO, send, emit  
+from flask import Flask, render_template, request
+from flask_socketio import SocketIO, send, emit
+from datetime import datetime
 
-app = Flask(__name__)  
-app.config['SECRET_KEY'] = 'your_secret_key'  
-socketio = SocketIO(app)  
+# Initialize Flask app and SocketIO
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+socketio = SocketIO(app, cors_allowed_origins="*")  # Allow CORS for development
 
-@app.route('/')  
-def index():  
-    return render_template('index.html')  
+# Store connected users (in production, use a proper database)
+connected_users = set()
 
-@socketio.on('message')  
-def handle_message(msg):  
-    print('Received message: ' + msg)  
-    send(msg, broadcast=True)  # Gửi tin nhắn cho tất cả người dùng  
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-if __name__ == '__main__':  
-    socketio.run(app)
+@socketio.on('connect')
+def handle_connect():
+    connected_users.add(request.sid)
+    emit('message', f'A user has joined the chat. Online users: {len(connected_users)}', broadcast=True)
