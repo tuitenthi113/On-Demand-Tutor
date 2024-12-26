@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h2>Real-time Chat</h2>
+    <div id="messages" style="border: 1px solid #ddd; padding: 10px; height: 300px; overflow-y: scroll;"></div>
+    <input id="message_input" type="text" placeholder="Type a message" style="width: 80%;">
+    <button id="send_button">Send</button>
+
+    <script>
+        // Kết nối đến server qua Socket.IO
+        var socket = io();
+
+        // Gửi tin nhắn từ client đến server
+        document.getElementById('send_button').onclick = function() {
+            let message = document.getElementById('message_input').value;
+            if (message.trim() !== "") {
+                socket.send(message);  // Gửi tin nhắn qua sự kiện 'message'
+                document.getElementById('message_input').value = '';  // Xóa input
+            }
+        };
+
+        // Nhận tin nhắn từ server và hiển thị
+        socket.on('message', function(msg) {
+            let messagesDiv = document.getElementById('messages');
+            let newMessage = document.createElement('div');
+            newMessage.textContent = msg;
+            messagesDiv.appendChild(newMessage);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;  // Tự động cuộn xuống cuối
+        });
+    </script>
+</body>
+</html>
