@@ -1,0 +1,39 @@
+body {
+    padding-top: 56px;
+}
+
+.carousel {
+    margin-bottom: 20px;
+    /* Khoảng cách giữa slide và roadmap */
+}
+
+.carousel-inner img {
+    height: 500px;
+    /* Cố định chiều cao hình ảnh */
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
+}
+
+.roadmap {
+    text-align: center;
+}
+
+.roadmap h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.list-of-courses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-of-courses>div {
+    margin: 20px;
+}

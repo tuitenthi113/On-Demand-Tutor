@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/ctkh.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ltkh.css">
+</head>
+
+<body>
+
+    <!-- Bắt đầu header -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PhucBatTu.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Danh sách lựa chọn</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tùy chọn
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                                <li><a class="dropdown-item" href="#">Đăng kí</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Bảo mật</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm gia sư"
+                            aria-label="Search">
+                        <button class="btn btn-success" type="submit">Tìm kiếm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Kết thúc header -->
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Trang chủ </a> > <a href="#"> Khóa học Zoom</a> > <span>Khóa luyện đề toán
+                THPT</span>
+        </div>
+        <h1>Khóa luyện đề toán THPT</h1>
+        <p>Khóa học Khóa luyện đề toán THPT từ Cơ bản tới Nâng cao là khóa học cung cấp trọn vẹn kiến thức của chương
+            trình lớp 12. Mục tiêu là xây dựng tư duy logic, kỹ năng giải quyết bài toán, nền tảng vững vàng cho kì THPT
+            được kết quả như mong đợi</p>
+        <p>Khóa học phù hợp với người mới chưa mất gốc hoặc hỏng kiến thức cơ bản , tư duy logic còn yếu và chưa có nền
+            tảng về toán học mong muốn cải thiện kỹ năng.</p>
+        <div class="course-info">
+            <div class="badge">
+                <span class="bestseller">Bestseller</span>
+            </div>
+            <div class="rating">
+                <span>5.0</span> ⭐⭐⭐⭐⭐ <span>258 đánh giá</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-section">
+        <div class="course-card">
+            <img src="../img/teacher/1.jpg" alt="Course Image" class="course-image">
+            <div class="course-details">
+                <h3 class="course-title">ĐẠI SỐ TỪ CƠ BẢN TỚI <span class="highlight">NÂNG CAO</span></h3>
+                <p class="price">
+                    <span class="current-price">2,750,000 đ</span>
+                    <span class="original-price">4,800,000 đ</span>
+                </p>
+                <button class="register-btn">Đăng Ký Học</button>
+                <div class="contact-info">
+                    <p>Bạn cần tư vấn thêm, liên hệ với 28Tech:</p>
+                    <p><span class="zalo-icon">📱</span> Zalo: <a href="tel:0965303260">0965303260</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bắt đầu lộ trình khóa học -->
+    <div class="scrollable-section">
+        <div class="course-container">
+            <h2>Lộ trình khóa học</h2>
+            <div class="section">
+                <div class="section-header">
+                    <span>Phần 1: Học HTML5, CSS3 (7 bài)</span>
+                    <button class="toggle-btn">−</button>
+                </div>
+                <ul class="lesson-list">
+                    <li><span class="play-icon">▶</span> Bài 1: Giới thiệu khóa học, Học HTML5 (Tiết 1)</li>
+                    <li><span class="play-icon">▶</span> Bài 2: Học HTML5 (Tiết 2)</li>
+                    <li><span class="play-icon">▶</span> Bài 3: Học HTML5 (Tiết 3)</li>
+                    <li><span class="play-icon">▶</span> Bài 4: Học CSS3 (Tiết 1)</li>
+                    <li><span class="play-icon">▶</span> Bài 5: Học CSS3 (Tiết 2)</li>
+                    <li><span class="play-icon">▶</span> Bài 6: Học CSS3 (Tiết 3)</li>
+                    <li><span class="play-icon">▶</span> Bài 7: Học CSS3 (Tiết 4)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <span>Phần 2: Học HTML5, CSS3 (7 bài)</span>
+                    <button class="toggle-btn">−</button>
+                </div>
+                <ul class="lesson-list">
+                    <li><span class="play-icon">▶</span> Bài 1: Giới thiệu khóa học, Học HTML5 (Tiết 1)</li>
+                    <li><span class="play-icon">▶</span> Bài 2: Học HTML5 (Tiết 2)</li>
+                    <li><span class="play-icon">▶</span> Bài 3: Học HTML5 (Tiết 3)</li>
+                    <li><span class="play-icon">▶</span> Bài 4: Học CSS3 (Tiết 1)</li>
+                    <li><span class="play-icon">▶</span> Bài 5: Học CSS3 (Tiết 2)</li>
+                    <li><span class="play-icon">▶</span> Bài 6: Học CSS3 (Tiết 3)</li>
+                    <li><span class="play-icon">▶</span> Bài 7: Học CSS3 (Tiết 4)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <span>Phần 3: Học HTML5, CSS3 (7 bài)</span>
+                    <button class="toggle-btn">−</button>
+                </div>
+                <ul class="lesson-list">
+                    <li><span class="play-icon">▶</span> Bài 1: Giới thiệu khóa học, Học HTML5 (Tiết 1)</li>
+                    <li><span class="play-icon">▶</span> Bài 2: Học HTML5 (Tiết 2)</li>
+                    <li><span class="play-icon">▶</span> Bài 3: Học HTML5 (Tiết 3)</li>
+                    <li><span class="play-icon">▶</span> Bài 4: Học CSS3 (Tiết 1)</li>
+                    <li><span class="play-icon">▶</span> Bài 5: Học CSS3 (Tiết 2)</li>
+                    <li><span class="play-icon">▶</span> Bài 6: Học CSS3 (Tiết 3)</li>
+                    <li><span class="play-icon">▶</span> Bài 7: Học CSS3 (Tiết 4)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Kết thúc lộ trình khóa học -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section");
+
+            sections.forEach(section => {
+                const toggleBtn = section.querySelector(".toggle-btn");
+                const lessonList = section.querySelector(".lesson-list");
+
+                toggleBtn.addEventListener("click", function () {
+                    if (lessonList.style.display === "none" || lessonList.style.display === "") {
+                        lessonList.style.display = "block";
+                        toggleBtn.textContent = "−";
+                    } else {
+                        lessonList.style.display = "none";
+                        toggleBtn.textContent = "+";
+                    }
+                });
+            });
+        }); 
+    </script>
+</body>
+
+</html>

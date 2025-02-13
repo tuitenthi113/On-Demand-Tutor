@@ -1,0 +1,186 @@
+/* Bắt đầu container */
+.container {
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #c1d4f7, #d9bff5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100% !important;
+    height: 30%;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #333;
+}
+
+h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #f9c74f;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.bestseller {
+    color: #fff;
+    font-weight: bold;
+}
+
+.rating {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Kết thúc container */
+
+/* Cấu hinh layout */
+
+.fixed-section {
+    position: fixed;
+    /* Phần cố định */
+    top: 35%;
+    left: 0;
+    width: 30%;
+    /* Chiếm 30% chiều rộng */
+    /* Chiều cao toàn màn hình */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.scrollable-section {
+    margin-left: 30%;
+    /* Để tránh đè lên phần cố định */
+    width: 70%;
+    /* Chiếm phần còn lại */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Bắt đầu card mua khóa học */
+
+.course-card {
+    width: 350px;
+    height: 30%;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+}
+
+.course-details {
+    padding: 15px;
+}
+
+.course-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.price {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.current-price {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.register-btn {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+.course-info {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 15px 0;
+}
+
+.course-info li {
+    font-size: 14px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.contact-info .zalo-icon {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Kết thúc card mua khóa học */
